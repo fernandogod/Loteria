@@ -1,29 +1,24 @@
 package com.example.fernandogodinez.loteria;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-/**
- * Created by fernandogodinez on 23/04/15.
- */
-public class Principal_activity extends ActionBarActivity{
+
+public class play extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.principal);
-
+        setContentView(R.layout.activity_play);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_play, menu);
         return true;
     }
 
@@ -41,15 +36,4 @@ public class Principal_activity extends ActionBarActivity{
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void gritar(View view){
-        Intent Griton = new Intent(Principal_activity.this,Griton.class);
-        startActivity(Griton);
-    }
-
-    public void jugar(View view){
-        Intent play = new Intent(Principal_activity.this,play.class);
-        startActivity(play);
-    }
-	
 }
