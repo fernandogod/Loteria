@@ -8,10 +8,17 @@ import android.view.MenuItem;
 
 public class Tabla3x3 extends ActionBarActivity {
 
+		private int tamanio_tabla;
+		private String modo_juego;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabla3x3);
+		
+		Bundle bundle = getIntent().getExtras();
+		tamanio_tabla = bundle.getInt("tamanio_tabla");
+		modo_juego = bundle.getString("modo_juego");
+		
     }
 
 

@@ -1,9 +1,11 @@
 package com.example.fernandogodinez.loteria;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class play extends ActionBarActivity {
@@ -36,4 +38,23 @@ public class play extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+	
+    public void seleccionarObjetivo3x3(View view){
+        Intent seleccionar_objetivo = new Intent(play.this,Seleccionar_objetivo.class);
+		seleccionar_objetivo.putExtra("tamanio_tabla", 33);//tamanio_tabla = tabla 3x3
+        startActivity(seleccionar_objetivo);
+    }
+
+    public void seleccionarObjetivo4x4(View view){
+        Intent seleccionar_objetivo = new Intent(play.this,Seleccionar_objetivo.class);
+		seleccionar_objetivo.putExtra("tamanio_tabla", 44);//tamanio_tabla = tabla 4x4
+        startActivity(seleccionar_objetivo);
+    }
+
+    public void seleccionarObjetivo5x5(View view){
+        Intent seleccionar_objetivo = new Intent(play.this,Seleccionar_objetivo.class);
+		seleccionar_objetivo.putExtra("tamanio_tabla", 55);//tamanio_tabla = tabla 5x5
+        startActivity(seleccionar_objetivo);
+    }
+	
 }
