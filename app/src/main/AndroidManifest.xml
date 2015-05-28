@@ -35,6 +35,22 @@
             android:name=".play"
             android:label="@string/title_activity_play" >
         </activity>
+        <activity
+            android:name=".Seleccionar_objetivo"
+            android:label="@string/title_activity_seleccionar_objetivo" >
+        </activity>
+        <activity
+            android:name=".Tabla3x3"
+            android:label="@string/title_activity_tabla3x3" >
+        </activity>
+        <activity
+            android:name=".Tabla4x4"
+            android:label="@string/title_activity_tabla4x4" >
+        </activity>
+        <activity
+            android:name=".Tabla5x5"
+            android:label="@string/title_activity_tabla5x5" >
+        </activity>
     </application>
 
 </manifest>
