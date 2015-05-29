@@ -35,6 +35,7 @@
         android:id="@+id/button5"
         android:layout_marginEnd="31dp"
         android:layout_alignTop="@+id/next"
-        android:layout_alignEnd="@+id/View_carta" />
+        android:layout_alignEnd="@+id/View_carta"
+        android:onClick="verJugadas" />
 
 </RelativeLayout>

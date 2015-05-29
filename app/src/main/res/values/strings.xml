@@ -15,4 +15,5 @@
     <string name="title_activity_griton">Griton</string>
     <string name="next">Siguiente</string>
     <string name="jugadas">Ver jugadas</string>
+    <string name="title_activity_jugadas">Jugadas</string>
 </resources>
