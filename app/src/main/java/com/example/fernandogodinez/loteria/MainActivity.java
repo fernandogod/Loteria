@@ -1,3 +1,4 @@
+
 package com.example.fernandogodinez.loteria;
 
 import android.app.Activity;
@@ -17,7 +18,6 @@ public class MainActivity extends Activity {
 
     private ProgressBar mProgress;
     private int mProgressStatus = 0;
-
     private Handler mHandler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
