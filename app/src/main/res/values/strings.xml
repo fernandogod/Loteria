@@ -21,8 +21,8 @@
     <string name="title_activity_tabla3x3">Tabla3x3</string>
     <string name="title_activity_tabla4x4">Tabla4x4</string>
     <string name="title_activity_tabla5x5">Tabla5x5</string>
-    <string name="tabla3x3">Tabla 3x3</string>
-    <string name="tabla4x4">Tabla 4x4</string>
-    <string name="tabla5x5">Tabla 5x5</string>
+    <string name="tabla3x3">Pulsa sobre la figura de la carta anunciada</string>
+    <string name="tabla4x4">Pulsa sobre la figura de la carta anunciada</string>
+    <string name="tabla5x5">Pulsa sobre la figura de la carta anunciada</string>
 
 </resources>

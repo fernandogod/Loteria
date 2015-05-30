@@ -68,8 +68,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButtonCruz"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/ic_launcher256"
+        android:onClick="seleccionarModoCruz"
         android:layout_alignTop="@+id/imageButtonVert"
-        android:layout_toEndOf="@+id/imageButtonDiagDer" 
-		android:onClick="seleccionarModoCruz"/>
+        android:layout_toEndOf="@+id/imageButtonVert" />
 </RelativeLayout>
