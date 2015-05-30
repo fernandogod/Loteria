@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Loteria</string>
 
+    <string name="app_name">Loteria</string>
     <string name="hello_world">Hello world!</string>
     <string name="integrantes">CHAVARRIA CAMACHO JUAN ANTONIO\n
                                DIAZ TECANTE DAVID ALEJANDRO\n
@@ -15,5 +16,17 @@
     <string name="title_activity_griton">Griton</string>
     <string name="next">Siguiente</string>
     <string name="jugadas">Ver jugadas</string>
+<<<<<<< HEAD
+    <string name="title_activity_play">play</string>
+    <string name="title_activity_seleccionar_objetivo">Seleccionar_objetivo</string>
+    <string name="title_activity_tabla3x3">Tabla3x3</string>
+    <string name="title_activity_tabla4x4">Tabla4x4</string>
+    <string name="title_activity_tabla5x5">Tabla5x5</string>
+    <string name="tabla3x3">Pulsa sobre la figura de la carta anunciada</string>
+    <string name="tabla4x4">Pulsa sobre la figura de la carta anunciada</string>
+    <string name="tabla5x5">Pulsa sobre la figura de la carta anunciada</string>
+
+=======
     <string name="title_activity_jugadas">Jugadas</string>
+>>>>>>> 5b9b14b65a39a0f178caa00fb7e12eafe1920e5a
 </resources>

@@ -71,4 +71,9 @@ public class Principal_activity extends Activity {
         startActivity(Griton);
     }
 
+    public void jugar(View view){
+        Intent play = new Intent(Principal_activity.this,play.class);
+        startActivity(play);
+    }
+	
 }
