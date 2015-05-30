@@ -1,7 +1,10 @@
 package com.example.fernandogodinez.loteria;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,10 +14,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 
-public class Griton extends ActionBarActivity {
+public class Griton extends Activity {
 
     public ArrayList<String> cartas;
-    public ArrayList<String> jugadas;
+    public static ArrayList<Integer> jugadas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +26,12 @@ public class Griton extends ActionBarActivity {
 
         //inicializamos la variable jugadas.
 
-        jugadas= new ArrayList<String>();
+        jugadas= new ArrayList<Integer>();
             //creamos un array para las cartas -----------------.
             cartas = new ArrayList<String>();
             cartas.add("gallo");        //1
             cartas.add("arbol");        //2
-            cartas.add("melon");        //3
+            /*cartas.add("melon");        //3
             cartas.add("valiente");     //4
             cartas.add("gorrito");      //5
             cartas.add("muerte");       //6
@@ -81,7 +84,7 @@ public class Griton extends ActionBarActivity {
             cartas.add("botella");      //53
             cartas.add("barril");       //54
             // finaliza la iniciacion de la baraja -------.
-
+*/
             //revolvemos la baraja.
             Collections.shuffle(cartas);
 
@@ -90,7 +93,7 @@ public class Griton extends ActionBarActivity {
             String carta_siguiente = cartas.remove(0);
 
             //añadimos la carta jugada a el arreglo para ver cuales ya salieron
-            jugadas.add(carta_siguiente);
+            jugadas.add(this.getResources().getIdentifier("drawable/" + carta_siguiente, null, this.getPackageName()));
 
             //obtenemos la view donde ira la imagen.
             ImageView cartaView;
@@ -126,6 +129,31 @@ public class Griton extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+
+
+        new AlertDialog.Builder(Griton.this)
+                .setTitle("Aviso")
+                .setMessage("¿En verdad deseas dejar de ser Gritón?")
+                .setPositiveButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+
+            }
+        }).setNegativeButton("Aceptar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        })
+                .show();
+
+    }
+
     public boolean nextCard(View view){
         //condicional para ver que el arreglo no este vacio
         if(!cartas.isEmpty()) {
@@ -133,7 +161,7 @@ public class Griton extends ActionBarActivity {
             String carta_siguiente = cartas.remove(0);
 
             //añadimos la carta jugada a el arreglo para ver cuales ya salieron
-            jugadas.add(carta_siguiente);
+            jugadas.add(this.getResources().getIdentifier("drawable/" + carta_siguiente, null, this.getPackageName()));
 
             //obtenemos la view donde ira la imagen.
             ImageView cartaView;
@@ -144,6 +172,11 @@ public class Griton extends ActionBarActivity {
             cartaView.setImageResource(res_imagen);
         }
         return true;
+    }
+
+    public void verJugadas(View view){
+        Intent Jugadas = new Intent(Griton.this,Jugadas.class);
+        startActivity(Jugadas);
     }
 
 }

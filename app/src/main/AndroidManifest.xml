@@ -32,6 +32,7 @@
                 android:value="com.example.fernandogodinez.loteria.Principal_activity" />
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".play"
             android:label="@string/title_activity_play" >
         </activity>
@@ -50,6 +51,14 @@
         <activity
             android:name=".Tabla5x5"
             android:label="@string/title_activity_tabla5x5" >
+=======
+            android:name=".Jugadas"
+            android:label="@string/title_activity_jugadas"
+            android:parentActivityName=".Griton" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.fernandogodinez.loteria.Griton" />
+>>>>>>> 5b9b14b65a39a0f178caa00fb7e12eafe1920e5a
         </activity>
     </application>
 

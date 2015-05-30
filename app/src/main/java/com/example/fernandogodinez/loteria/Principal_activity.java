@@ -1,8 +1,10 @@
 package com.example.fernandogodinez.loteria;
 
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,7 +12,7 @@ import android.view.View;
 /**
  * Created by fernandogodinez on 23/04/15.
  */
-public class Principal_activity extends ActionBarActivity{
+public class Principal_activity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,28 @@ public class Principal_activity extends ActionBarActivity{
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(Principal_activity.this)
+                .setTitle("Aviso")
+                .setMessage("¿En verdad desea salir de la aplicación?")
+                .setPositiveButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+
+            }
+        }).setNegativeButton("Aceptar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        })
+                .show();
     }
 
     public void gritar(View view){
