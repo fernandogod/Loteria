@@ -5,34 +5,53 @@
     android:layout_height="fill_parent"
     android:weightSum="1"
     tools:context=".Principal_activity"
-    android:id="@+id/principal">
+    android:id="@+id/principal"
+    android:background="@drawable/lote_backgroud">
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/play"
         android:id="@+id/button"
-        android:layout_marginTop="90dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/button3"
-		android:onClick="jugar" />
+        android:onClick="jugar"
+        android:src="@drawable/b_griton"
+        android:background="@null"
+        android:layout_below="@+id/loteria_inicio"
+        android:layout_alignStart="@+id/loteria_inicio"
+        android:layout_marginTop="36dp" />
 
 		
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/griton"
         android:id="@+id/button2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="gritar" />
+        android:onClick="gritar"
+        android:src="@drawable/b_jugar"
+        android:background="@null"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/button"
+        android:layout_alignStart="@+id/button" />
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/out"
         android:id="@+id/button3"
-        android:layout_marginTop="91dp"
+        android:layout_marginTop="47dp"
+        android:src="@drawable/b_salir"
+        android:background="@null"
         android:layout_below="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loteria_inicio"
+        android:src="@drawable/lote_inicio"
+        android:focusableInTouchMode="false"
+        android:layout_marginTop="27dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

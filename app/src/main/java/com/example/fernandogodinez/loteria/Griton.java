@@ -31,7 +31,7 @@ public class Griton extends Activity {
             cartas = new ArrayList<String>();
             cartas.add("gallo");        //1
             cartas.add("arbol");        //2
-            /*cartas.add("melon");        //3
+            cartas.add("melon");        //3
             cartas.add("valiente");     //4
             cartas.add("gorrito");      //5
             cartas.add("muerte");       //6
@@ -40,7 +40,7 @@ public class Griton extends Activity {
             cartas.add("bandolon");     //9
             cartas.add("violoncello");  //10
             cartas.add("garza");        //11
-            cartas.add("diablito");     //12
+            cartas.add("diablo");     //12
             cartas.add("pajaro");       //13
             cartas.add("mano");         //14
             cartas.add("bota");         //15
@@ -55,7 +55,7 @@ public class Griton extends Activity {
             cartas.add("camaron");      //24
             cartas.add("jaras");        //25
             cartas.add("musico");       //26
-            cartas.add("araña");        //27
+            cartas.add("arana");        //27
             cartas.add("soldado");      //28
             cartas.add("estrella");     //29
             cartas.add("cazo");         //30
@@ -84,7 +84,7 @@ public class Griton extends Activity {
             cartas.add("botella");      //53
             cartas.add("barril");       //54
             // finaliza la iniciacion de la baraja -------.
-*/
+
             //revolvemos la baraja.
             Collections.shuffle(cartas);
 
