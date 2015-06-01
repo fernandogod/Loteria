@@ -17,26 +17,32 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next"
         android:id="@+id/next"
-        android:onClick="nextCard"
-        android:layout_marginStart="41dp"
+        android:onClick="verJugadas"
+        android:src="@drawable/b_jugadas"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:background="@null"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp" />
 
-    <Button
+    <ImageButton
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/jugadas"
         android:id="@+id/button5"
-        android:layout_marginEnd="31dp"
+        android:onClick="nextCard"
+        android:src="@drawable/b_siguiente"
+        android:background="@null"
         android:layout_alignTop="@+id/next"
         android:layout_alignEnd="@+id/View_carta"
-        android:onClick="verJugadas" />
+        android:adjustViewBounds="false"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp" />
 
 </RelativeLayout>

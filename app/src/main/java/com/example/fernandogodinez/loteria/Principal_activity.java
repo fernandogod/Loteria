@@ -75,5 +75,25 @@ public class Principal_activity extends Activity {
         Intent play = new Intent(Principal_activity.this,play.class);
         startActivity(play);
     }
-	
+
+    public void salir(View view){
+        new AlertDialog.Builder(Principal_activity.this)
+                .setTitle("Aviso")
+                .setMessage("¿En verdad desea salir de la aplicación?")
+                .setPositiveButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                }).setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+
+            }
+        }).setNegativeButton("Aceptar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        })
+                .show();
+    }
 }
